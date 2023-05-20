@@ -37,6 +37,7 @@
 		F781CE862A184A5F007D5044 /* 4-flags.ch8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-flags.ch8"; sourceTree = "<group>"; };
 		F781CE872A185A90007D5044 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		F781CE882A1960E3007D5044 /* font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = font.h; sourceTree = "<group>"; };
+		F781CE892A196240007D5044 /* instruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = instruction.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 				F76131732A16C424000AAF90 /* cpu.hpp */,
 				F781CE872A185A90007D5044 /* util.h */,
 				F781CE882A1960E3007D5044 /* font.h */,
+				F781CE892A196240007D5044 /* instruction.h */,
 			);
 			path = "Chip-8";
 			sourceTree = "<group>";

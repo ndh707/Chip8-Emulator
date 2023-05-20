@@ -25,7 +25,7 @@ public:
 	void init();
 	
 	//emulate one cycle of the CPU
-	void cycle();
+	void cycle(cpu*);
 	
 	//takes in file path and stores opcodes into memory
 	void loadROM(std::string);

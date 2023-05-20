@@ -37,7 +37,7 @@ int main()
 		SDL_Delay(16);
 		SDL_RenderClear(renderer);
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-		chip8.cycle();
+		chip8.cycle(&chip8);
 		SDL_UpdateTexture(texture, NULL, chip8.video, 64 * sizeof(Uint32));
 		SDL_RenderCopy(renderer, texture, NULL, NULL);
 		SDL_RenderPresent(renderer);
