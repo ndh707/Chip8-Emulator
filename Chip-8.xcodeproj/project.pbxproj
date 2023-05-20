@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F76131692A0EFD4B000AAF90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F76131682A0EFD4B000AAF90 /* main.cpp */; };
+		F76131712A0F002C000AAF90 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76131702A0F002C000AAF90 /* SDL2.framework */; };
+		F76131742A16C424000AAF90 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F76131722A16C424000AAF90 /* cpu.cpp */; };
+		F76131762A16C664000AAF90 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F76131752A16C664000AAF90 /* util.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F76131652A0EFD4B000AAF90 /* Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76131652A0EFD4B000AAF90 /* Chip-8 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chip-8"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76131682A0EFD4B000AAF90 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F76131702A0F002C000AAF90 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		F76131722A16C424000AAF90 /* cpu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cpu.cpp; sourceTree = "<group>"; };
+		F76131732A16C424000AAF90 /* cpu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cpu.hpp; sourceTree = "<group>"; };
+		F76131752A16C664000AAF90 /* util.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		F781CE822A16F582007D5044 /* 2-ibm-logo.ch8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-ibm-logo.ch8"; sourceTree = "<group>"; };
+		F781CE832A16F582007D5044 /* c8_test.c8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = c8_test.c8; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F76131712A0F002C000AAF90 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,33 +51,56 @@
 		F761315C2A0EFD4B000AAF90 = {
 			isa = PBXGroup;
 			children = (
-				F76131672A0EFD4B000AAF90 /* Test */,
+				F781CE812A16F544007D5044 /* ROM */,
+				F76131672A0EFD4B000AAF90 /* Chip-8 */,
 				F76131662A0EFD4B000AAF90 /* Products */,
+				F761316F2A0F002C000AAF90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		F76131662A0EFD4B000AAF90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F76131652A0EFD4B000AAF90 /* Test */,
+				F76131652A0EFD4B000AAF90 /* Chip-8 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F76131672A0EFD4B000AAF90 /* Test */ = {
+		F76131672A0EFD4B000AAF90 /* Chip-8 */ = {
 			isa = PBXGroup;
 			children = (
 				F76131682A0EFD4B000AAF90 /* main.cpp */,
+				F76131722A16C424000AAF90 /* cpu.cpp */,
+				F76131732A16C424000AAF90 /* cpu.hpp */,
+				F76131752A16C664000AAF90 /* util.cpp */,
 			);
-			path = Test;
+			path = "Chip-8";
+			sourceTree = "<group>";
+		};
+		F761316F2A0F002C000AAF90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F76131702A0F002C000AAF90 /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F781CE812A16F544007D5044 /* ROM */ = {
+			isa = PBXGroup;
+			children = (
+				F781CE822A16F582007D5044 /* 2-ibm-logo.ch8 */,
+				F781CE832A16F582007D5044 /* c8_test.c8 */,
+			);
+			path = ROM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F76131642A0EFD4B000AAF90 /* Test */ = {
+		F76131642A0EFD4B000AAF90 /* Chip-8 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F761316C2A0EFD4B000AAF90 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildConfigurationList = F761316C2A0EFD4B000AAF90 /* Build configuration list for PBXNativeTarget "Chip-8" */;
 			buildPhases = (
 				F76131612A0EFD4B000AAF90 /* Sources */,
 				F76131622A0EFD4B000AAF90 /* Frameworks */,
@@ -77,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = Test;
+			name = "Chip-8";
 			productName = Test;
-			productReference = F76131652A0EFD4B000AAF90 /* Test */;
+			productReference = F76131652A0EFD4B000AAF90 /* Chip-8 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F76131602A0EFD4B000AAF90 /* Build configuration list for PBXProject "Test" */;
+			buildConfigurationList = F76131602A0EFD4B000AAF90 /* Build configuration list for PBXProject "Chip-8" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F76131642A0EFD4B000AAF90 /* Test */,
+				F76131642A0EFD4B000AAF90 /* Chip-8 */,
 			);
 		};
 /* End PBXProject section */
@@ -119,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F76131742A16C424000AAF90 /* cpu.cpp in Sources */,
 				F76131692A0EFD4B000AAF90 /* main.cpp in Sources */,
+				F76131762A16C664000AAF90 /* util.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +274,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +286,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -254,7 +297,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F76131602A0EFD4B000AAF90 /* Build configuration list for PBXProject "Test" */ = {
+		F76131602A0EFD4B000AAF90 /* Build configuration list for PBXProject "Chip-8" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F761316A2A0EFD4B000AAF90 /* Debug */,
@@ -263,7 +306,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F761316C2A0EFD4B000AAF90 /* Build configuration list for PBXNativeTarget "Test" */ = {
+		F761316C2A0EFD4B000AAF90 /* Build configuration list for PBXNativeTarget "Chip-8" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F761316D2A0EFD4B000AAF90 /* Debug */,
