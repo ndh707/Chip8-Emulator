@@ -34,6 +34,9 @@
 		F76131752A16C664000AAF90 /* util.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
 		F781CE822A16F582007D5044 /* 2-ibm-logo.ch8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-ibm-logo.ch8"; sourceTree = "<group>"; };
 		F781CE832A16F582007D5044 /* c8_test.c8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = c8_test.c8; sourceTree = "<group>"; };
+		F781CE842A1848C7007D5044 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F781CE852A184A5F007D5044 /* 3-corax+.ch8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-corax+.ch8"; sourceTree = "<group>"; };
+		F781CE862A184A5F007D5044 /* 4-flags.ch8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-flags.ch8"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 		F761315C2A0EFD4B000AAF90 = {
 			isa = PBXGroup;
 			children = (
+				F781CE842A1848C7007D5044 /* README.md */,
 				F781CE812A16F544007D5044 /* ROM */,
 				F76131672A0EFD4B000AAF90 /* Chip-8 */,
 				F76131662A0EFD4B000AAF90 /* Products */,
@@ -89,6 +93,8 @@
 		F781CE812A16F544007D5044 /* ROM */ = {
 			isa = PBXGroup;
 			children = (
+				F781CE852A184A5F007D5044 /* 3-corax+.ch8 */,
+				F781CE862A184A5F007D5044 /* 4-flags.ch8 */,
 				F781CE822A16F582007D5044 /* 2-ibm-logo.ch8 */,
 				F781CE832A16F582007D5044 /* c8_test.c8 */,
 			);

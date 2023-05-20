@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 
-std::string TEST_FILEPATH = "/Users/alexnoh/repos/Chip-8/ROM/2-ibm-logo.ch8";
+std::string TEST_FILEPATH = "/Users/alexnoh/repos/Chip-8/ROM/3-corax+.ch8";
 
 //int argc, char* argv[]
 int main()
