@@ -6,6 +6,7 @@
 #include "time.h"
 #include <string>
 #include "cpu.hpp"
+#include "util.h"
 
 //0x000 to 0x1FF were reserved for Chip-8 Interpreter
 const unsigned int START_ADDRESS = 0x200;
@@ -52,14 +53,18 @@ void cpu::init()
 void cpu::cycle()
 {
 	//Fetch
+	//opcodes are 16 bit, memory is 8 bit, use OR to combine memory at pc and pc+1
 	opcode = (memory[programCounter] << 8u | memory[programCounter + 1]);
+	std::cout << "\n" << "opcode: ";
+	std::cout << std::hex << opcode;
+	std::cout << "\n";
 	
 	//increment PC
 	programCounter += 2;
 
 	//Decode & Execute
 	uint16_t val;
-	switch(opcode & 0xF000)
+	switch(first(opcode))
 	{
 		case 0x0000:
 			if(opcode == 0x00E0)
@@ -95,35 +100,40 @@ void cpu::cycle()
 			break;
 
 		case 0x8000:
-			val = (opcode & 0x000F);
-			switch(val)
-				case 0x0000:
+			std::cout << "\n 8000 REACHED \n";
+			std::cout << "VAL: " << std::hex << last(opcode);
+			std::cout << "\n";
+			switch(last(opcode))
+			{
+				case 0x0:
 					OP_8xy0();
 					break;
-				case 0x0001:
+				case 0x1:
+					std::cout << "\n 1 \n";
 					OP_8xy1();
 					break;
-				case 0x0002:
+				case 0x2:
 					OP_8xy2();
 					break;
-				case 0x0003:
+				case 0x3:
 					OP_8xy3();
 					break;
-				case 0x0004:
+				case 0x4:
 					OP_8xy4();
 					break;
-				case 0x0005:
+				case 0x5:
 					OP_8xy5();
 					break;
-				case 0x0006:
+				case 0x6:
 					OP_8xy6();
 					break;
-				case 0x0007:
+				case 0x7:
 					OP_8xy7();
 					break;
-				case 0x000E:
+				case 0xE:
 					OP_8xyE();
 					break;
+			}
 
 		case 0xA000:
 			OP_Annn();
@@ -139,44 +149,48 @@ void cpu::cycle()
 			break;
 
 		case 0xE000:
-			val = (opcode & 0xF00F);
-			switch(val)
-				case 0xE00E:
+			switch(low(opcode))
+			{
+				case 0x9E:
 					OP_Ex9E();
 					break;
-				case 0xE001:
+				case 0xA1:
 					OP_ExA1();
 					break;
+			}
 
 		case 0xF000:
-			val = (opcode & 0xF0FF);
-			case 0xF007:
-				OP_Fx07();
-				break;
-			case 0xF015:
-				OP_Fx15();
-				break;
-			case 0xF018:
-				OP_Fx18();
-				break;
-			case 0xF01E:
-				OP_Fx1E();
-				break;
-			case 0xF00A:
-				OP_Fx0A();
-				break;
-			case 0xF029:
-				OP_Fx29();
-				break;
-			case 0xF033:
-				OP_Fx33();
-				break;
-			case 0xF055:
-				OP_Fx55();
-				break;
-			case 0xF065:
-				OP_Fx65();
-				break;
+			switch(low(opcode))
+			{
+				case 0x07:
+					OP_Fx07();
+					break;
+				case 0x15:
+					OP_Fx15();
+					break;
+				case 0x18:
+					OP_Fx18();
+					break;
+				case 0x1E:
+					OP_Fx1E();
+					break;
+				case 0x0A:
+					OP_Fx0A();
+					break;
+				case 0x29:
+					OP_Fx29();
+					break;
+				case 0x33:
+					OP_Fx33();
+					break;
+				case 0x55:
+					OP_Fx55();
+					break;
+				case 0x65:
+					OP_Fx65();
+					break;
+			}
+			
 		default:
 			std::cout << "unknown opcode";
 	}

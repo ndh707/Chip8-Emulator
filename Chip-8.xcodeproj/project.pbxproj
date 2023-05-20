@@ -10,7 +10,6 @@
 		F76131692A0EFD4B000AAF90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F76131682A0EFD4B000AAF90 /* main.cpp */; };
 		F76131712A0F002C000AAF90 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76131702A0F002C000AAF90 /* SDL2.framework */; };
 		F76131742A16C424000AAF90 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F76131722A16C424000AAF90 /* cpu.cpp */; };
-		F76131762A16C664000AAF90 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F76131752A16C664000AAF90 /* util.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,12 +30,12 @@
 		F76131702A0F002C000AAF90 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		F76131722A16C424000AAF90 /* cpu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cpu.cpp; sourceTree = "<group>"; };
 		F76131732A16C424000AAF90 /* cpu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cpu.hpp; sourceTree = "<group>"; };
-		F76131752A16C664000AAF90 /* util.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
 		F781CE822A16F582007D5044 /* 2-ibm-logo.ch8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2-ibm-logo.ch8"; sourceTree = "<group>"; };
 		F781CE832A16F582007D5044 /* c8_test.c8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = c8_test.c8; sourceTree = "<group>"; };
 		F781CE842A1848C7007D5044 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F781CE852A184A5F007D5044 /* 3-corax+.ch8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3-corax+.ch8"; sourceTree = "<group>"; };
 		F781CE862A184A5F007D5044 /* 4-flags.ch8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4-flags.ch8"; sourceTree = "<group>"; };
+		F781CE872A185A90007D5044 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +76,7 @@
 				F76131682A0EFD4B000AAF90 /* main.cpp */,
 				F76131722A16C424000AAF90 /* cpu.cpp */,
 				F76131732A16C424000AAF90 /* cpu.hpp */,
-				F76131752A16C664000AAF90 /* util.cpp */,
+				F781CE872A185A90007D5044 /* util.h */,
 			);
 			path = "Chip-8";
 			sourceTree = "<group>";
@@ -160,7 +159,6 @@
 			files = (
 				F76131742A16C424000AAF90 /* cpu.cpp in Sources */,
 				F76131692A0EFD4B000AAF90 /* main.cpp in Sources */,
-				F76131762A16C664000AAF90 /* util.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
