@@ -4,7 +4,25 @@
 #include <string>
 #include <iostream>
 
-std::string TEST_FILEPATH = "/Users/alexnoh/repos/Chip-8/ROM/3-corax+.ch8";
+std::string TEST_FILEPATH = "/Users/alexnoh/repos/Chip-8/ROM/2-ibm-logo.ch8";
+uint8_t keymap[16] = {
+	SDLK_x,
+	SDLK_1,
+	SDLK_2,
+	SDLK_3,
+	SDLK_q,
+	SDLK_w,
+	SDLK_e,
+	SDLK_a,
+	SDLK_s,
+	SDLK_d,
+	SDLK_z,
+	SDLK_c,
+	SDLK_4,
+	SDLK_r,
+	SDLK_f,
+	SDLK_v,
+};
 
 //int argc, char* argv[]
 int main()
@@ -29,9 +47,37 @@ int main()
 	bool is_running = true;
 	SDL_Event event;
 	while (is_running) {
+		//input handling
 		while (SDL_PollEvent(&event)) {
 			if (event.type == SDL_QUIT) {
 				is_running = false;
+			}
+			if (event.type == SDL_KEYDOWN)
+			{
+				//quit if ESC down
+				if (event.key.keysym.sym == SDL_SCANCODE_ESCAPE)
+				{
+					is_running = false;
+				}
+				//if keydown input matches matching SDL key map, set matching keypad to 1
+				for(int i=0; i < sizeof(chip8.keypad); i++)
+				{
+					if (event.key.keysym.sym == keymap[i])
+					{
+						chip8.keypad[i] = 1;
+					}
+				}
+			}
+			if (event.type == SDL_KEYUP)
+			{
+				//if key up input matches matching SDL key map, set matching keypad to 0
+				for(int i=0; i < sizeof(chip8.keypad); i++)
+				{
+					if (event.key.keysym.sym == keymap[i])
+					{
+						chip8.keypad[i] = 0;
+					}
+				}
 			}
 		}
 		SDL_Delay(16);
