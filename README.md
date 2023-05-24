@@ -9,7 +9,9 @@ Uses [Cowgod's Chip-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C
 Requires SDL2 Framework to run
 
 Passing IBM Test ROM
-<img width="636" alt="chip8ss2" src="https://github.com/ndh707/Chip8-Emulator/assets/90161063/e83a0b75-d4b1-4c27-8167-d413cbe46713">
+
+<img width="639" alt="Chip8ss" src="https://github.com/ndh707/Chip8-Emulator/assets/90161063/aca512be-d510-40ac-abee-ad09abe0435f">
 
 Passing Corax Instruction Test ROM
-<img width="639" alt="Chip8ss" src="https://github.com/ndh707/Chip8-Emulator/assets/90161063/aca512be-d510-40ac-abee-ad09abe0435f">
+
+<img width="636" alt="chip8ss2" src="https://github.com/ndh707/Chip8-Emulator/assets/90161063/e83a0b75-d4b1-4c27-8167-d413cbe46713">
